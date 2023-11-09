@@ -34,6 +34,10 @@ public class TaskListFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        updateView();
+    }
+
+    public void updateView() {
         TaskStorage taskStorage = TaskStorage.getInstance();
         List<Task> tasks = taskStorage.getTasks();
 
